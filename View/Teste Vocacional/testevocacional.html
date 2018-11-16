@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html ng-app='testevocacional'> 
+<head>
+	<title>teste</title>
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="angular.js"></script>
+    <script>
+    var app = angular.module("testevocacional", []);
+
+    app.controller('teste' ,function($scope,$http){
+
+      $scope.lap = true;
+      $scope.ap= false;
+      $scope.pt2=function(){
+        $scope.ap=true;
+        $scope.ap2 = false;
+        $scope.lap = false;
+      }
+      $scope.ap2 = false;
+      $scope.pt3 = function(){
+        $scope.ap2 = true;
+        $scope.ap = false;
+        $scope.lap = false;
+      }
+
+
+   
+})
+
+
+    </script>
+</head>
+<style type="text/css">
+.td-1{
+	padding: 1px;
+	margin-left: 45%;
+	float: left;
+}
+.td-2{
+	padding: 1px;
+	float: center;
+
+}
+.td-3{
+	display: inline-block;
+	padding: 1px;
+	margin-right: -105px;
+}
+.submit{
+	margin-top: 4%;
+	text-align: center;
+}
+
+ @media screen and (max-width: 700px) {
+           .textual-txt {
+          text-align: center;
+                        }}
+
+@media screen and (max-width: 700px) {
+           .content {
+        
+                        }
+                             
+                                            }
+</style>
+
+
+<body ng-controller="teste">
+
+<div class="textual-txt" style="text-align: center;"  ng-show="lap" > 
+<h3 ><b>Selecione suas características</b></h3>
+<p>Escolha aquelas que tem mais a ver com você.<br> Pode marcar quantas palavras quiser. Faça em ambiente calmo, sem interrupções e com bastante atenção.</p>
+</div>
+<br>
+
+
+
+
+
+<table class="content" ng-show="lap">
+  <tr>
+    <td class="td-1"><label><input type="checkbox" name=""  ><span>Simpático </span></label></td>
+    <td class="td-2"><label><input type="checkbox" name=""><span>Cuidadoso  </span></label></td>
+    <td class="td-3"><label><input type="checkbox" name=""><span>Preocupado</span></label></td>
+  </tr>
+  <br>
+  <tr>
+    <td class="td-1" "><label><input type="checkbox" name="" ><span>Inquieto </span></label></td>
+    <td class="td-2" "><label><input type="checkbox" name=""><span>Estável  </span></label></td>
+    <td class="td-3"><label><input type="checkbox" name=""><span>Despretensioso</span></label></td>
+  </tr>
+  <tr>
+    <td class="td-1"><label><input type="checkbox" name=""><span> Bem humorado </span></label></td>
+    <td class="td-2"><label><input type="checkbox" name=""><span>Incerto </span></label></td>
+    <td class="td-3"><label><input type="checkbox" name=""><span>Interessado</span></label></td>
+  </tr>
+  <tr>
+    <td class="td-1"><label><input type="checkbox" name=""><span> Exigente</span></label></td>
+    <td class="td-2"><label><input type="checkbox" name=""><span> Interessado </span></label></td>
+    <td class="td-3"><label><input type="checkbox" name=""><span>Dependente</span></label></td>
+  </tr>
+  <tr>
+    <td class="td-1"><label><input type="checkbox" name=""><span>Pacífico</span></label></td>
+    <td class="td-2"><label><input type="checkbox" name=""><span>Articulado</span></label></td>
+    <td class="td-3"><label><input type="checkbox" name=""><span>Previsível</span></label></td>
+  </tr>
+  <tr>
+    <td class="td-1"><label><input type="checkbox" name=""><span>Seguro </span></label></td>
+    <td class="td-2"><label><input type="checkbox" name=""><span>Dedicado</span></label></td>
+    <td class="td-3"><label><input type="checkbox" name=""><span>Persuasivo</span></label></td>
+  </tr>
+  <tr>
+    <td class="td-1"><label><input type="checkbox" name=""><span>Competitivo</span></label></td>
+    <td class="td-2"><label><input type="checkbox" name=""><span>Teimoso</span></label></td>
+    <td class="td-3"><label><input type="checkbox" name=""><span>Encantador
+</span></label></td>
+  </tr>
+   <tr>
+    <td class="td-1"><label><input type="checkbox" name=""><span>Maleável </span></label></td>
+    <td class="td-2"><label><input type="checkbox" name=""><span>Obediente </span></label></td>
+    <td class="td-3"><label><input type="checkbox" name=""><span>Introspectivo</span></label></td>
+  </tr>
+   <tr>
+    <td class="td-1"><label><input type="checkbox" name=""><span>Perfeccionista </span></label></td>
+    <td class="td-2"><label><input type="checkbox" name=""><span>Precavido</span></label></td>
+    <td class="td-3"><label><input type="checkbox" name=""><span>Prático</span></label></td>
+  </tr>
+   <tr>
+    <td class="td-1"><label><input type="checkbox" name=""><span>Impulsivo </span></label></td>
+    <td class="td-2"><label><input type="checkbox" name=""><span>Indiferente</span></label></td>
+    <td class="td-3"><label><input type="checkbox" name=""><span>Ágil </span></label></td>
+  </tr>
+   <tr>
+    <td class="td-1"><label><input type="checkbox" name=""><span>Sociável</span></label></td>
+    <td class="td-2"><label><input type="checkbox" name=""><span>Carismático</span></label></td>
+    <td class="td-3"><label><input type="checkbox" name=""><span>Passivo </span></label></td>
+  </tr>
+   <tr>
+    <td class="td-1"><label><input type="checkbox" name=""><span>Ousado</span></label></td>
+    <td class="td-2"><label><input type="checkbox" name=""><span>Independente </span></label></td>
+    <td class="td-3"><label><input type="checkbox" name=""><span>Cauteloso</span></label></td>
+  </tr>
+   <tr>
+    <td class="td-1"><label><input type="checkbox" name=""><span>Convincente</span></label></td>
+    <td class="td-2"><label><input type="checkbox" name=""><span>Alegre</span></label></td>
+    <td class="td-3"><label><input type="checkbox" name=""><span>Destemido</span></label></td>
+  </tr>
+   <tr>
+    <td class="td-1"><label><input type="checkbox" name=""><span>Mente Aberta </span></label></td>
+    <td class="td-2"><label><input type="checkbox" name=""><span>Inspirador </span></label></td>
+    <td class="td-3"><label><input type="checkbox" name=""><span>Firme </span></label></td>
+  </tr>
+   <tr>
+    <td class="td-1"><label><input type="checkbox" name=""><span>Obstinado</span></label></td>
+    <td class="td-2"><label><input type="checkbox" name=""><span>Calmo</span></label></td>
+    <td class="td-3"><label><input type="checkbox" name=""><span>Compreensivo</span></label></td>
+  </tr>
+   <tr>
+    <td class="td-1"><label><input type="checkbox" name=""><span>Amável</span></label></td>
+    <td class="td-2"><label><input type="checkbox" name=""><span>Contido</span></label></td>
+    <td class="td-3"><label><input type="checkbox" name=""><span>Empolgado</span></label></td>
+  </tr>  <tr>
+    <td class="td-1"><label><input type="checkbox" name=""><span>Extrovertido </span></label></td>
+    <td class="td-2"><label><input type="checkbox" name=""><span>Prevenido</span></label></td>
+    <td class="td-3"><label><input type="checkbox" name=""><span>Versátil</span></label></td>
+  </tr>  <tr>
+    <td class="td-1"><label><input type="checkbox" name=""><span> Enérgico </span></label></td>
+    <td class="td-2"><label><input type="checkbox" name=""><span>Persistente</span></label></td>
+    <td class="td-3"><label><input type="checkbox" name=""><span>Desligado </span></label></td>
+  </tr>  <tr>
+    <td class="td-1"><label><input type="checkbox" name=""><span>Divertido </span></label></td>
+    <td class="td-2"><label><input type="checkbox" name=""><span>Objetivo </span></label></td>
+    <td class="td-3"><label><input type="checkbox" name=""><span>Assume Riscos Calculados</span></label></td>
+  </tr>  <tr>
+    <td class="td-1"><label><input type="checkbox" name=""><span> Disciplinado </span></label></td>
+    <td class="td-2"><label><input type="checkbox" name=""><span> Meticuloso</span></label></td>
+    <td class="td-3"><label><input type="checkbox" name=""><span>Ponderado</span></label></td>
+  </tr>  <tr>
+    <td class="td-1"><label><input type="checkbox" name=""><span>Observador</span></label></td>
+    <td class="td-2"><label><input type="checkbox" name=""><span>  Ansioso</span></label></td>
+    <td class="td-3"><label><input type="checkbox" name=""><span> Analítico</span></label></td>
+  </tr>  <tr>
+    <td class="td-1"><label><input type="checkbox" name=""><span>Animado</span></label></td>
+    <td class="td-2"><label><input type="checkbox" name=""><span> Discreto </span></label></td>
+    <td class="td-3"><label><input type="checkbox" name=""><span> Original</span></label></td>
+  </tr>  <tr>
+    <td class="td-1"><label><input type="checkbox" name=""><span>Conciliador</span></label></td>
+    <td class="td-2"><label><input type="checkbox" name=""><span>  Liberal </span></label></td>
+    <td class="td-3"><label><input type="checkbox" name=""><span>Sarcástico </span></label></td>
+  </tr>  <tr>
+    <td class="td-1"><label><input type="checkbox" name=""><span> Pessimista </span></label></td>
+    <td class="td-2"><label><input type="checkbox" name=""><span> Rebelde </span></label></td>
+    <td class="td-3"><label><input type="checkbox" name=""><span>Diplomático</span></label></td>
+  </tr>  <tr>
+    <td class="td-1"><label><input type="checkbox" name=""><span> Direto</span></label></td>
+    <td class="td-2"><label><input type="checkbox" name=""><span> Atencioso </span></label></td>
+    <td class="td-3"><label><input type="checkbox" name=""><span> Dominador</span></label></td>
+  </tr>  <tr>
+    <td class="td-1"><label><input type="checkbox" name=""><span>Receoso </span></label></td>
+    <td class="td-2"><label><input type="checkbox" name=""><span>Respeitoso </span></label></td>
+    <td class="td-3"><label><input type="checkbox" name=""><span> Descrente </span></label></td>
+  </tr>  <tr>
+    <td class="td-1"><label><input type="checkbox" name=""><span>Agitado </span></label></td>
+    <td class="td-2"><label><input type="checkbox" name=""><span> Influente </span></label></td>
+    <td class="td-3"><label><input type="checkbox" name=""><span>Disponível </span></label></td>
+  </tr>  <tr>
+    <td class="td-1"><label><input type="checkbox" name=""><span> Expansivo </span></label></td>
+    <td class="td-2"><label><input type="checkbox" name=""><span> Convencional </span></label></td>
+    <td class="td-3"><label><input type="checkbox" name=""><span>Paciente </span></label></td>
+  </tr>
+<tr>
+    <td class="td-1"><label><input type="checkbox" name=""><span>Aventureiro</span></label></td>
+    <td class="td-2"><label><input type="checkbox" name=""><span> Decidido</span></label></td>
+    <td class="td-3"><label><input type="checkbox" name=""><span>Realista </span></label></td>
+  </tr>
+<tr>
+    <td class="td-1"><label><input type="checkbox" name=""><span>Expressivo</span></label></td>
+    <td class="td-2"><label><input type="checkbox" name=""><span> Determinado </span></label></td>
+    <td class="td-3"><label><input type="checkbox" name=""><span>Fechado </span></label></td>
+  </tr>
+<tr>
+    <td class="td-1"><label><input type="checkbox" name=""><span> Autoconfiante</span></label></td>
+    <td class="td-2"><label><input type="checkbox" name=""><span>Sensato</span></label></td>
+    <td class="td-3"><label><input type="checkbox" name=""><span> Adequado</span></label></td>
+  </tr>
+<tr>
+    <td class="td-1"><label><input type="checkbox" name=""><span> Espontâneo</span></label></td>
+    <td class="td-2"><label><input type="checkbox" name=""><span>  Ativo</span></label></td>
+    <td class="td-3"><label><input type="checkbox" name=""><span> Desconfiado </span></label></td>
+  </tr>
+<tr>
+    <td class="td-1"><label><input type="checkbox" name=""><span> Livre </span></label></td>
+    <td class="td-2"><label><input type="checkbox" name=""><span> Justo </span></label></td>
+    <td class="td-3"><label><input type="checkbox" name=""><span> Desencanado</span></label></td>
+  </tr>
+<tr>
+    <td class="td-1"><label><input type="checkbox" name=""><span> Lógico </span></label></td>
+    <td class="td-2"><label><input type="checkbox" name=""><span> Apático</span></label></td>
+    <td class="td-3"><label><input type="checkbox" name=""><span>  Reservado</span></label></td>
+  </tr>
+<tr>
+    <td class="td-1"><label><input type="checkbox" name=""><span> Humilde</span></label></td>
+    <td class="td-2"><label><input type="checkbox" name=""><span>  Egocêntrico </span></label></td>
+    <td class="td-3"><label><input type="checkbox" name=""><span> Sistemático </span></label></td>
+  </tr>
+<tr>
+    <td class="td-1"><label><input type="checkbox" name=""><span>Gosta de se arriscar</span></label></td>
+    <td class="td-2"><label><input type="checkbox" name=""><span>Sereno </span></label></td>
+    <td class="td-3"><label><input type="checkbox" name=""><span>Sério</span></label></td>
+  </tr>
+
+
+  </table>
+
+
+<div class="submit" ng-show="lap" >
+   <button class="btn waves-effect waves-light" type="submit" ng-click="pt2()" name="action">Continuar</button>
+     </div>   <br><br><br><br>
+
+
+     <form ng-show='ap' > 
+      <h3 style=" text-align: center"><b> Queremos saber mais sobre você!</b></h3>
+       <h4 style=" text-align: center"><b> Qual é a sua idade? </b></h4>
+       <p style=" text-align: center; opacity: 0.5;" >Sua idade é {{idade}}</p>
+       
+ <input ng-model="idade" type="text" placeholder="Digite sua idade" style="width: 500px; margin-left: 33%"><br><br>
+              <button class="btn waves-effect waves-light" type="submit" ng-click="pt3()" name="action" style="margin-left: 46%;" >Continuar</button>
+            </form>
+
+
+            <form ng-show="ap2"> 
+
+              <h3 style=" text-align: center"><b>Então aonde você mora?</b></h3>
+              <h5 style=" text-align: center">Essa etapa é bem rapida, queremos saber aonde você mora para dar informações mais precisas</h5>
+              <input type="text" placeholder="Digite sua cidade" style="width: 500px; margin-left: 33%">
+              <button class="btn waves-effect waves-light" type="submit" ng-click="" name="action" style="margin-left: 46%;" >Continuar</button>
+            </form>
+    
+</body>
+</html>

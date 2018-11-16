@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="angular.js"></script>
+    <script>
+    var app =  angular.module("app",[]);
+
+    app.controller("appcon", function($scope, $http){
+        $scope.Nome= "lowrjgwerhgrlgj";
+        $scope.idade = 15 ;
+
+        $scope.teste = function(){
+            $http({method:"Post", url:"teste.txt"}).then(function(response){
+                document.getElementById("teste").innerHTML = response.data;
+            })
+        }
+    })
+    </script>
+</head>
+<body ng-controller="appcon" id="teste">
+    <button ng-click="teste()">teste</button>
+</body>
+</html>
