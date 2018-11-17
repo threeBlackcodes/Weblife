@@ -13,27 +13,20 @@
     padding: 0%;
   
 }
-.navbar{ background-color:#222; height:70px; max-width: 1800px; margin: auto; }
+.navbar{ background-color:#222; height:70px; max-width: 1800px; margin: auto; width: 100%; }
 .row{width: 100%; display: flex;}
-#logo{width: 200px; margin-top: 30px;}
-
+#logo{width: 200px; margin-top: 10px; margin-left: 15px;}
 #search{
-    margin-left: ;
-    margin-top: 8px;
+    margin-top: 20px;
     position: absolute;
 }
 
-		/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+	
 		@media screen and (max-height: 450px) {
 		    .sidebar {padding-top: 1px;}
 		    .sidebar a {font-size: 18px;}
 		}
 
-
-
-		.stylish-input-group .input-group-addon{
-			background: white !important; 
-		}
 		.stylish-input-group .form-control{
 			border-right:0; 
 			box-shadow:0 0 0; 
@@ -45,29 +38,24 @@
 		}
        .login{
           margin-left: 92%;
-          margin-top: -3%;
+          margin-top: -55px;
        }
        .login1{
-          margin-left: 82%;
-          margin-top: -2.6%;
+          margin-left: 81%;
+          margin-top: -55px;;
           
        }
-       .termo a { 
-           color:rgb(128, 108, 104);
-        
-        }
-
-        
+            
         nav li {
   display: inline-block;
 
 }
 
 nav a {
-  color: #fff;
-  text-decoration: none;
-  display: block;
-margin-top: 100px;
+color: #fff;
+text-decoration: none;
+display: block;
+margin-top: 80px;
 margin-left: 50px;
 }
 
@@ -77,13 +65,14 @@ nav li:hover a {
 
 
 .menu-sub {
-	border-radius: 15px;
+  border-radius: 15px;
   position: absolute;
-  margin-top: 15px;
-  background: #222;
-  width: 30%;
+  margin-top: 20px;
+  background:#474646;
+  border: 3px groove #494343;
+  width: 38%;
   display: none;
-  color: #fff;
+  color:  #fff;
   padding: 2em;
   border:2px solid #fFF;
 }
@@ -96,102 +85,308 @@ nav li:hover .menu-sub {
   display: block;
 }
 .menu-main{
-	margin-top: -64px;
-		padding: 12px;
+	margin-top:-64px;
+	padding: 12px;
 }
 #question{
     width: 20px;
 }
 #question-1{
-    border:1px solid #fff;
+   
     border-radius: 50%;
     width: 130%;
+    margin-left: 160%;
     text-align: center;
     
 }
+@media (min-width:180px){
+    #logo{
+        width: 100%;
+        margin-top: 25px;
+        margin-left:-2px;
+    }
+    .search{
+       margin-left: -130px; 
+       margin-top: 35px;
+           }
+    #search{
+        height: 10px;
+        width: 220px; 
+    }
+    .navbar{
+        height: 20%;
+    }
+    .login{
+       margin-left: 95px;
+    }
+    .login1{
+       margin-left:11px;
+       margin-top: 21px;
+      
+    }
+  
+}
+@media (min-width:320px){
+    #logo{
+        width: 60%;
+        margin-top: 15px;
+        margin-left:55px;
+    }
+    .search{
+       margin-left: -49%; 
+       margin-top: 25px;
+           }
+      #search{
+        width: 360px; 
+    }
+
+    .login{
+       margin-left: 190px;
+       margin-top: -48px;
+    }
+     .login1{
+       margin-left:30px;
+       margin-top: 5px;
+} 
+#question{
+    margin-left: 15px;
+    margin-top: -20px;
+    z-index: 1;
+}
+
+.menu-sub{
+    width: 80%;
+    
+    margin-top: 8px;
+    z-index: 99;
+}
+.navbar{
+        width: 100%;
+    }
+}
+@media (min-width:576px){
+    #logo{
+        width: 40%;
+        margin-top: 30px;
+        margin-left:15px;
+    }
+    .search{
+        margin-left: -200px;
+
+       margin-top: 9px;
+   }
+    #search{
+       width: 105.8%;
+       }
+
+    .login{
+       margin-left: 460px;
+       margin-top: -60px;
+    }
+     .login1{
+       margin-left:440px;
+       margin-top: -45px;
+} 
+#question{
+    margin-left: 75px;
+    margin-top: -60px;
+    z-index: 1;
+}
+
+}
+@media (min-width:768px){
+    #logo{
+        width: 32%;
+        margin-top: 10px;
+        margin-left:5px;
+    }
+    .search{
+        margin-left: -200px;
+       margin-top: 9px;
+   }
+    #search{
+       margin-top: -40px;
+       margin-left: 440px;
+       }
+       .login{
+       margin-left: 620px;
+       margin-top:-40px;
+    }
+     .login1{
+       margin-left:500px;
+       margin-top: 10px;
+} 
+#question{
+    margin-left: 85px;
+    margin-top: -60px;
+    z-index: 1;
+}
+
+@media (min-width:992px){
+    #logo{
+        width: 32%;
+        margin-top: 10px;
+        margin-left:5px;
+    }
+    .search{
+        margin-left: -220px;
+       margin-top: 9px;
+   }
+    #search{
+       margin-top: -40px;
+       margin-left: 440px;
+       }
+       .login{
+       margin-left: 860px;
+       margin-top:-40px;
+    }
+     .login1{
+       margin-left:850px;
+       margin-top: -30px;
+} 
+#question{
+    margin-left: 90px;
+    margin-top: -60px;
+    z-index: 1;
+}
+
+}
+@media (min-width:1200px){
+
+   #logo{
+        width: 20%;
+        margin-top: 10px;
+        margin-left:5px;
+    }
+    .search{
+        margin-left: -200px;
+       margin-top: 9px;
+   }
+    #search{
+       margin-top: -40px;
+       margin-left: 440px;
+       }
+       .login{
+       margin-left: 1150px;
+       margin-top:-80px;
+    }
+     .login1{
+       margin-left:1000px;
+       margin-top: -30px;
+} 
+#question{
+    margin-left: 120px;
+    margin-top: -60px;
+    z-index: 1;
+}
+
+
+}
+@media (min-width:1800px){
+    .login{
+       margin-left: 1550px;
+       margin-top:-80px;
+    }
+     .login1{
+       margin-left:1350px;
+       margin-top: -30px;
+} 
+.search{
+        margin-left: -150px;
+       margin-top: 9px;
+   }
+
+    
+}
+
 </style>
 
-<body>
-        
+
+
+    
 <div class="navbar">
 
-        
-        <div class="row">
-        
-            <div class="logo">
-                <a href="index.php"><img src="logo.png" id="logo" ></a>
-                  </div>
+    
+    <div class="row">
+    
+        <div class="logo">
+            <a href="index.php"><img src="logo.png" id="logo" ></a>
+              </div>
 
-                    
-		<div class="menu">
-            <nav>
+                
+	<div class="menu">
+        <nav>
 
-    <ul class="menu-main">
+<ul class="menu-main">
   
 
-<li><a href="#" style="text-decoration: none;"><div id="question-1"><img src="question.png" id="question" ></div></a>
-        <div class="menu-sub">
-          <div class="menu-col-2">
+<li><a href="#" style="text-decoration: none;"><div id="question-1"><img src="question.png" id="question" title="Como Funciona?" ></div></a>
+    <div class="menu-sub">
+      <div class="menu-col-2">
+
+        <h3>Como Funciona?</h3><hr >
 <div class="row">
-              <img src="img/facu.png" style="border-radius: 50%; width: 80px;height: 80px; padding: 10px;">
-            <p style="text-decoration: none; font-size: 20px; margin-top: 25px;" >Encontre sua faculdade</p>
-              </div> 
-            <p>Faça uma busca pelas universidades que existe na baixada santista</p> 
-          
-           
-                <div class="row">
-              <img src="img/question1.png" style="border-radius: 50%; width: 80px;height: 80px; ">
-            <p style="text-decoration: none; font-size: 20px; margin-top: 25px;" > Detalhes da grade</p>
-              </div> 
-            <p> Procure por uma area expecifica, veja a grade dos curso que mais lhe interresa-lhe</p> 
+
+  
+          <img src="img/facu.png" style="border-radius: 50%; width: 75px;height: 75px; padding: 10px;">
+        <p style="text-decoration: none; font-size: 18px; margin-top: 25px;" >Encontre sua faculdade</p>
+          </div> 
+        <p>Faça uma busca pelas universidades que existe na baixada santista.</p> 
+      
+       
+            <div class="row">
+          <img src="img/question1.png" style="border-radius: 50%; width: 69px;height: 69px; ">
+        <p style="text-decoration: none; font-size: 18px; margin-top: 25px; margin-left: 6px;" > Detalhes da grade</p>
+          </div> 
+        <p> Procure por uma area expecifica, veja a grade dos curso que mais lhe interresa-lhe.</p> 
+
+  
+
+<div class="row">
+          <img src="img/question2.png" style="border-radius: 50%; width: 73px;height: 73px; padding: 10px;">
+        <p style="text-decoration: none; font-size: 18px; margin-top: 25px; margin-left: 4px;" >Economize tempo  </p>
+          </div> 
+        <p> Facilide suas busca usando o pesquisa avançada para mais precisao no resultado!!</p> 
 
       
-
-<div class="row">
-              <img src="img/question2.png" style="border-radius: 50%; width: 85px;height: 85Px; padding: 10px;">
-            <p style="text-decoration: none; font-size: 20px; margin-top: 25px;" >Economize tempo  </p>
-              </div> 
-            <p> Facilide suas busca usando o pesquisa avançada para mais precisao no resultado!!</p> 
-
-          
 </div>
-        </div>
-      </li>
+    </div>
+  </li>
 
-    </ul>
+</ul>
 
 </nav>
 </div>
 
-                                  <div>
-                                   <div class="col-sm-5 col-sm-offset-1" id="search">
-										<div class="input-group stylish-input-group">
-											<input type="text" class="form-control"  placeholder="Pesquisar..." >
-											<span class="input-group-addon">
-												<button type="submit">
-													<span class="glyphicon glyphicon-search"></span>
-												</button>  
-											</span>
-                                        </div>
-                                   </div>                            
-                                </div>
-                                <div class="login1">
-                                        <button type="button" class="btn btn-light" data-toggle="modal" data-target="#myModal1" style="background-color:#222; color:#fff;" ><span class="glyphicon glyphicon-user"></span> Cadastra-se</button>
-                                                                               </div>
+                              <div class="search" >
+                               <div class="col-md-5 col-sm-offset-1" id="search">
+									<div class="input-group stylish-input-group">
+										<input type="text" class="form-control"  style="width:100%" placeholder="Pesquisar..." >
+										<span class="input-group-addon">
+											<button type="submit">
+												<span class="glyphicon glyphicon-search"></span>
+											</button>  
+										</span>
+                                    </div>
+                               </div>                            
+                            </div>
+                            <div class="login1">
+                                    <button type="button" class="btn btn-light" data-toggle="modal" data-target="#myModal1" style="background-color:#222; color:#fff;" ><span class="glyphicon glyphicon-user"></span> Cadastra-se</button>
+                                                                           </div>
 
 
- < <div class="login">
-    <button type="button" class="btn btn-light" data-toggle="modal" data-target="#myModal" style="background-color:#222; color:#fff;"><span class="glyphicon glyphicon-log-in"></span>Login</button>
-                                        </div>
-                                    
-                                         
-    </div>
+ <div class="login">
+<button type="button" class="btn btn-light" data-toggle="modal" data-target="#myModal" style="background-color:#222; color:#fff;"><span class="glyphicon glyphicon-log-in"></span>Login</button>
+                                    </div>
+                                
+                                     
+</div>
 
 
 
 
 
-    </body>
+
      <!-- Modal -->
                                         
      <div class="modal" id="myModal">
