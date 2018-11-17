@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html ng-app="Search">
+
 <head>
     <meta charset="utf-8" />
     <title>Search</title>
@@ -8,12 +9,24 @@
     <script src="node_modules/angular/angular.min.js"></script>
     <script src="js/search_controller.js"></script>
 </head>
+
 <body ng-controller="Searchcontroller">
     <div class="container">
-    <input type="text" class="form-control" ng-model="search" placeholder="Digite aqui seu boco" />
-    <div ng-repeat="insti in data[0].cursos | filter: {curso: search}">
-        {{insti.curso}} <br>
-    <img ng-src="{{data[0].img}}" width="100px" height="100px">
-    </div>
+        <input type="text" class="form-control" ng-model="search" placeholder="Pesquisar" />
+        <table class="table">
+
+            <tr ng-repeat="insti in data ">
+                <td><img ng-src="{{insti.img}}" width="70px" height="70px"></td>
+                <td>{{insti.nome}}</td>
+                <td>
+                    <table class="table">
+                        <tr ng-repeat="curse in insti.cursos | filter : {curso: search}">
+                            <td> {{curse.curso}} </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
 </body>
+
 </html>
