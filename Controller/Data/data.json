@@ -9,38 +9,38 @@
                     "Area": "exatas"
                 },
                 {
-                    "curso": "Ciencia da Computação",
+                    "curso": "Administração",
                     "descricao": "é bom",
                     "Area": "exatas"
                 },
                 {
-                    "curso": "Ciencia da Computação",
+                    "curso": "Sistema de informação",
                     "descricao": "é bom",
                     "Area": "exatas"
                 }
             ],
-            "img": ""
+            "img": "./teste.jpg"
         },
         {
-            "nome": "Unisantos",
+            "nome": "Harvard",
             "cursos": [
                 {
-                    "curso": "Ciencia da Computação",
+                    "curso": "Contabilidade",
                     "descricao": "é bom",
                     "Area": "exatas"
                 },
                 {
-                    "curso": "Ciencia da Computação",
+                    "curso": "Analista de sistemas",
                     "descricao": "é bom",
                     "Area": "exatas"
                 },
                 {
-                    "curso": "Ciencia da Computação",
+                    "curso": "Tecnolólogo",
                     "descricao": "é bom",
                     "Area": "exatas"
                 }
             ],
-            "img": ""
+            "img": "./teste.jpg"
         }
     ]
 }

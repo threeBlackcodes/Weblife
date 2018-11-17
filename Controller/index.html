@@ -7,10 +7,10 @@
     <script src="js/search_controller.js"></script>
 </head>
 <body ng-controller="Searchcontroller">
-    {{count}}
-    <input type="text" placeholder="Digite aqui seu boco" />
-    <div ng-repeat="insti in data">
-        {{insti.nome}}
+    <input type="text" ng-model="search" placeholder="Digite aqui seu boco" />
+    <div ng-repeat="insti in data[0].cursos | filter: {curso: search}">
+        {{insti.curso}} <br>
+    <img ng-src="{{data[0].img}}" width="100px" height="100px">
     </div>
 </body>
 </html>
