@@ -1,0 +1,16 @@
+{
+    "perguntas" : [
+        {"pergunta" :  "Pergunta?" , "alternativas" : [
+            {"alternativa" : "1", "tipo":"exatas", "ponto":20},
+            {"alternativa" : "2", "tipo":"humanas", "ponto":20},
+            {"alternativa" : "3", "tipo":"exatas", "ponto":20}
+            ]
+        },
+        {"pergunta" :  "Pergunta?" , "alternativas" : [
+            {"alternativa" : "1", "tipo":"exatas", "ponto":20},
+            {"alternativa" : "2", "tipo":"humanas", "ponto":20},
+            {"alternativa" : "3", "tipo":"exatas", "ponto":20}
+            ]
+        }
+    ]
+}

@@ -21,7 +21,7 @@
             <hr style="margin-bottom: 20px">
 
             <p>
-                <h3 class="text-center" ng-show="!end">{{(question+1) +". "+ alternativas[question].pergunta}}</h3>
+                <h3 class="text-center" ng-show="!end">{{(question+1) +". "+ perguntas[question].pergunta}}</h3>
             </p>
             <div ng-show="end">
                 
@@ -96,13 +96,13 @@
 
             
             <div>
-                <div ng-repeat="obj in alternativas[question].respostas" ng-show="!end">
-                    <button id="btn0" class="form-control hovers" ng-click="next(obj)">{{obj.resposta}}</button>
+                <div ng-repeat="obj in perguntas[question].alternativas" ng-show="!end">
+                    <button id="btn0" class="form-control hovers" ng-click="next(obj)">{{obj.alternativa}}</button>
                 </div>
 
                 <hr style="margin-top: 50px">
                 <footer>
-                    <p class="text-center">Questao {{question + 1}} de {{alternativas.length}}</p>
+                    <p class="text-center">Questao {{question + 1}} de {{perguntas.length}}</p>
                 </footer>
             </div>
         </div>
