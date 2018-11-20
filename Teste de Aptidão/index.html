@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html ng-app="QuizApp">
+
+<head lang="en">
+    <meta charset="utf-8" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Quiz</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="QuizStyle.css">
+
+
+</head>
+
+<body ng-controller="QuizController">
+    {{exatas}}
+    <div class="container" id="container">
+        <div class="col-md-5 center" style="Margin:20;">
+            <br><br>
+            <h1 class="text-center" >Selecione uma resposta</h1>
+            <p class="text-center" style="font-size:13px; opacity:0.8;" >Recomentamos que faça o teste com calma, sem pressa e um lugar quieto para ter resultados melhores!!</p>
+            <hr style="margin-bottom: 20px">
+
+            <p>
+                <h3 class="text-center" ng-show="!end">{{(question+1) +". "+ alternativas[question].pergunta}}</h3>
+            </p>
+            <div ng-show="end">
+                
+                <h1 class="text-center">Terminamos!</h1>
+
+            <!-- começo texto -->
+                <p align=""><b>Traços de <a style="color:red;" >Realista</a> :</b> prático, interativo, orientado para as máquinas e as ferramentas. </b></p>
+                   <p>Possíveis carreiras:
+                    Mecânico, carpinteiro, polícia, engenheiro, marceneiro, eletricista, desenhador técnico </p>
+<br>
+                <p align="" ><b>Traços de <a style="color:gold;" >Investigativo</a> :</b> analítico, intelectual, científico, explorativo, pensador.  </b></p>
+                    <p align="">Possíveis carreiras:
+                        Médico, programador informático, engenheiro, engenheiro de software, psicólogo, cientista .</p>
+            
+                        <br>
+                <p align="" ><b>Traços de <a style="color:blue;" >Artistico</a> :</b> criativo, original, inventivo, independente.  </b></p>
+                    <p align=>Possíveis carreiras:
+                         Arquiteto, jornalista, atores, escritores, curador, advogado, executivo de publicidade.</p>
+
+                        <br>
+                        <p align="" ><b>Traços de <a style="color:green;" >Social</a> :</b> cooperativo, apoiante, ajudante, curador/cuidador, professor.  </b></p>
+                            <p align="">Possíveis carreiras:
+                                Agente imobiliário, agente de viagens, CEO, político, vendas, gestor, corretor, planeador financeiro .</p>
+
+                                <br>
+                                <p align="" ><b>Traços de <a style="color:gray" >Empreendedor</a> :</b> competitivo, líder, persuasivo.  </b></p>
+                                    <p align="">Possíveis carreiras:
+                                        Conselheiro, professor, recursos humanos, enfermeiro, treinador, nutricionista .</p>
+
+                                <br>
+                                        <p align="" ><b>Traços de <a style="color:orangered" >Convencional</a> :</b> orientado para os detalhes, organizado, clerical.   </b></p>
+                                            <p align="">Possíveis carreiras:
+                                                Contabilista, paralegal, regulador de seguros, processador de dados, operador informático.</p>
+            
+                                                <br><br>
+                                                <div class="row1" style="display:inline-flex; margin-left: 45px;" >
+                                            
+                                                   <div class="row" style="color:#000; border-radius:50%;background-color:red; width:120px; height:120px;"  >  
+                                                    <div style="text-align:center; font-size:17px; margin-left:8.2%; margin-top: 20px; font-weight: bold;" >Realista<br >{{terminar()}}</div>
+                                                </div>
+
+                                                <div class="row" style="color:#000; border-radius:50%;background-color:gold; width:120px; height:120px; margin-left: 40px;"  >  
+                                                    <div style="text-align:center; font-size:15px; margin-left:12.2%; margin-top: 20px;" >Investigativo<br>{{terminar()}}</div>
+                                                </div>
+
+                                                <div class="row" style="color:#000; border-radius:50%;background-color:blue; width:120px; height:120px; margin-left: 40px;"  >  
+                                                    <div style="text-align:center; font-size:15px; margin-left:7%; margin-top: 20px;" >Artistico<br>{{terminar()}}</div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row2" style="display:inline-flex; margin-left: 108px;" >
+                                            
+                                                   <div class="row" style="color:#000; border-radius:50%;background-color:green; width:120px; height:120px;"  >  
+                                                    <div style="text-align:center; font-size:15px; margin-left:5%; margin-top: 20px;" >Social<br>{{terminar()}}</div>
+                                                </div>
+
+                                                <div class="row" style="color:#000;; border-radius:50%;background-color:gray; width:120px; height:120px; margin-left: 40px;"  >  
+                                                    <div style="text-align:center; font-size:15px; margin-left76%; margin-top: 20px;" >Empreendedor<br>{{terminar()}}</div>
+                                                </div>
+                                                </div>
+
+
+                                                <div class="row3" style="display:inline-flex; margin-left: 172px;" >
+                                            
+                                                    <div class="row" style="color:#000; border-radius:50%;background-color:orangered; width:120px; height:120px;" >  
+                                                     <div style="text-align:center; font-size:15px; margin-left:5%; margin-top: 22px;" >Convencional<br>{{terminar()}}</div>
+                                                 </div>
+                                                 </div>
+                                                
+            </div>
+
+            
+            <div>
+                <div ng-repeat="obj in alternativas[question].respostas" ng-show="!end">
+                    <button id="btn0" class="form-control hovers" ng-click="next(obj)">{{obj.resposta}}</button>
+                </div>
+
+                <hr style="margin-top: 50px">
+                <footer>
+                    <p class="text-center">Questao {{question + 1}} de {{alternativas.length}}</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="angular.js"></script>
+    <script src="Jquery.js"></script>
+    <script type="text/javascript" src="Ang_Controller.js"></script>
+    <script src="quiz.js"></script>
+    <script src="question.js"></script>
+
+</body>
+
+</html>

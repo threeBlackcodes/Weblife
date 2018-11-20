@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="../assents/js/jquery-3.3.1.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+
+
+                    $('#consulta').on('click', function(){
+                              $.ajax({
+                                   url : "../padm/consulta.php",
+                                   type : 'post',
+                                   data : {
+                                        pergunta : 1
+                                   },
+                                   beforeSend : function(){
+                                        $("#resultado").html("ENVIANDO...");
+                                   },
+                                   success: function(data){
+                                   var opgt = JSON.parse(data);
+
+                                   alert(opgt.ds_perguntas);
+
+                                   console.log(opgt);
+
+                                   $('#question').html(opgt.ds_perguntas)
+                                   }
+                              })
+                              .done(function(msg){
+
+                                   $("#resultado").html(msg);
+                              })
+                              .fail(function(jqXHR, textStatus, msg){
+                                   alert(msg);
+                              }); 
+
+                    });
+
+
+		});
+
+
+
+	</script>
+
+</head>
+<body>
+
+     <div class="grid">
+        <div id="quiz">
+            <h1>Escolha um pergunta</h1>
+            <h4>Faça com calma, sem pressao e num lugar quieto para ter resuntados melhores!!</h4>
+            <hr style="margin-bottom: 20px">
+
+            <p id="question"></p>
+
+            <div class="buttons">
+                <button id="btn0"><span id="choice0"></span></button>
+                <button id="btn1"><span id="choice1"></span></button>
+                <button id="btn2"><span id="choice2"></span></button>
+                <button id="btn3"><span id="choice3"></span></button>
+            </div>
+
+            <hr style="margin-top: 50px">
+            <footer>
+                <p id="progress">Questao</p>
+            </footer>
+        </div>
+    </div>    
+
+    <button id="consulta"> Testar Consulta </button>
+
+</body>
+</html>

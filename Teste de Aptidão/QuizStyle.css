@@ -1,0 +1,13 @@
+.center{
+      align-content: center;
+      margin: auto;
+}
+
+
+.hovers{transition: 200ms linear}   
+
+.hovers:hover{
+      background-color: cornflowerblue;
+      color: white;
+      cursor: pointer;
+}
